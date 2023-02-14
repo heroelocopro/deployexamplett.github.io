@@ -40,7 +40,7 @@
                         <th scope="row">{{ $evento->id }}</th>
                         <td>{{ $evento->nombre }}</td>
                         <td class="text-wrap"><p class="text-wrap d-flex flex-wrap">{{ Str::limit($evento->descripcion, 10) }}</p></td>
-                        <td><img class="img-fluid w-25" src="{{ asset('img/eventos/'.$evento->imagen) }}" alt=""></td>
+                        <td><img class="img-fluid w-25" src="{{ asset('/storage/images/eventos/'.$evento->imagen) }}" alt=""></td>
                         <td>{{ $evento->fechaInicio }}</td>
                         <td>{{ $evento->fechaFin }}</td>
                         {{-- bucle pa nombre depar --}}
