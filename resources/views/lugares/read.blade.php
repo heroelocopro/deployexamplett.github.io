@@ -39,7 +39,7 @@
             <td class="text-wrap">
               <p class="text-wrap d-flex flex-wrap">{{ Str::limit($lugar->descripcion, 30) }}</p>
             </td>
-            <td><img class="img-fluid w-25" src="{{ asset('img/lugares/'.$lugar->imagen) }}" alt=""></td>
+            <td><img class="img-fluid w-25" src="{{ asset('storage/images/lugares/'.$lugar->imagen) }}" alt=""></td>
             <td><iframe class="d-block mx-auto rounded-3 border " height="100%" width="100%" src="{{ $lugar->ubicacion }}" frameborder="0"></iframe></td>
           </tr>
           @endforeach
