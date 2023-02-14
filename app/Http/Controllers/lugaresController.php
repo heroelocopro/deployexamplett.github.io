@@ -44,11 +44,12 @@ class lugaresController extends Controller
         // verificamos la imagen y movemos a la carpeta
         if($request->hasFile('imagen'))
         {
-            $imagen = $request->file('imagen');
-            $ruta = 'img/lugares/';
-            $imagenNombre = time() .'-' . $imagen->getClientOriginalName();
-            $subirImagen = $request->file('imagen')->move($ruta,$imagenNombre);
-            $lugar->imagen = $imagenNombre;
+            $destination_path = 'public/images/lugares';
+            $image = $request->imagen;
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('imagen')->storeAs($destination_path,$image_name);
+
+            $lugar->imagen = $image_name;
         };
 
         // asignamos los valores 1x1
@@ -102,11 +103,12 @@ class lugaresController extends Controller
 
         if($request->hasFile('imagen'))
         {
-            $imagen = $request->file('imagen');
-            $ruta = 'img/lugares/';
-            $imagenNombre = time() .'-' . $imagen->getClientOriginalName();
-            $subirImagen = $request->file('imagen')->move($ruta,$imagenNombre);
-            $lugar->imagen = $imagenNombre;
+            $destination_path = 'public/images/lugares';
+            $image = $request->imagen;
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('imagen')->storeAs($destination_path,$image_name);
+
+            $lugar->imagen = $image_name;
         };
         
         $lugar->ubicacion = $request->ubicacion;
