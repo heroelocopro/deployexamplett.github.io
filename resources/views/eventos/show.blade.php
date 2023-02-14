@@ -44,7 +44,7 @@
             @endif
           @endforeach
 {{-- imagen --}}
- <img class="img-fluid text-center d-block mx-auto rounded-3 my-3" src="{{ asset('img/eventos/'.$evento->imagen) }}" alt="" srcset="">
+ <img class="img-fluid text-center d-block mx-auto rounded-3 my-3" src="{{ asset('/storage/images/eventos/'.$evento->imagen) }}" alt="" srcset="">
 
           {{-- descripcion --}}
           <p class="text-center text-dark font-weight-700 my-5"> {{ $evento->descripcion }} </p>
