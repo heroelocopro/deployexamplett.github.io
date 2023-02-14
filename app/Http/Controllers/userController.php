@@ -24,11 +24,12 @@ class userController extends Controller
 
             if($request->hasFile('perfil'))
         {
-            $imagen = $request->file('perfil');
-            $ruta = 'img/perfil/';
-            $imagenNombre = time() .'-' . $imagen->getClientOriginalName();
-            $subirImagen = $request->file('perfil')->move($ruta,$imagenNombre);
-            $usuario->perfil = $imagenNombre;
+            $destination_path = 'public/images/users';
+            $image = $request->perfil;
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('perfil')->storeAs($destination_path,$image_name);
+
+            $usuario->perfil = $image_name;
         };
 
         $usuario->save();
