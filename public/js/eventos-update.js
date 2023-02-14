@@ -30,7 +30,7 @@ evento.onchange = () => {
             console.log(respuesta);
             inputUpdateNombre.value = respuesta['nombre'];
             inputUpdateDescripcion.value = respuesta['descripcion'];
-            PrevisualizarImagenUpdate.setAttribute('src','/img/eventos/'+respuesta['imagen']);
+            PrevisualizarImagenUpdate.setAttribute('src','/storage/images/eventos/'+respuesta['imagen']);
             inputUpdateFechaInicio.value = respuesta['fechaInicio'];
             inputUpdateFechaFin.value = respuesta['fechaFin'];
             const http2 = new XMLHttpRequest();
