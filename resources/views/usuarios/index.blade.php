@@ -28,7 +28,7 @@
 
               <div class="col-lg-12 text-center">
                 <label for="input-perfil" class="text-center  font-weight-700 text-dark ">Foto de Perfil</label><br>
-                <img style="height: 20rem;width:20rem;" class="  img-fluid rounded-circle" src="{{ asset('img/perfil/'.auth()->user()->perfil) }}" alt="" srcset=""><br>
+                <img style="height: 20rem;width:20rem;" class="  img-fluid rounded-circle" src="{{ asset('storage/images/users/'.auth()->user()->perfil) }}" alt="" srcset=""><br>
                 <input accept="image/png, image/gif, image/jpeg" disabled  name="perfil" id="input-perfil" type="file">
               </div>
             </div>
