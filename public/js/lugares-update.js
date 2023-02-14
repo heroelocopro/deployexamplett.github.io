@@ -18,7 +18,7 @@ lugarSelect.onchange = () =>
             inputNombre.value = respuesta['nombre'];
             inputDescripcion.value = respuesta['descripcion'];
             inputUbicacion.value = respuesta['ubicacion'];
-            PrevisualizarImagen.setAttribute("src","/img/lugares/"+ respuesta['imagen']);
+            PrevisualizarImagen.setAttribute("src","/storage/images/lugares/"+ respuesta['imagen']);
             previsualizarUbicacion.setAttribute("src",respuesta['ubicacion']);
 
         }
