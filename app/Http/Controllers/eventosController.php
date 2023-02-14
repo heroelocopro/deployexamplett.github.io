@@ -66,11 +66,12 @@ class eventosController extends Controller
 
         if($request->hasFile('imagen'))
         {
-            $imagen = $request->file('imagen');
-            $ruta = 'img/eventos/';
-            $imagenNombre = time() .'-' . $imagen->getClientOriginalName();
-            $subirImagen = $request->file('imagen')->move($ruta,$imagenNombre);
-            $evento->imagen = $imagenNombre;
+            $destination_path = 'public/images/eventos';
+            $image = $request->imagen;
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('imagen')->storeAs($destination_path,$image_name);
+
+            $evento->imagen = $image_name;
         };
         $evento->nombre = $request->nombre;
         $evento->descripcion = $request->descripcion;
@@ -117,11 +118,12 @@ class eventosController extends Controller
         $evento = eventos::find($request->evento_id);
         if($request->hasFile('imagen'))
         {
-            $imagen = $request->file('imagen');
-            $ruta = 'img/eventos/';
-            $imagenNombre = time() .'-' . $imagen->getClientOriginalName();
-            $subirImagen = $request->file('imagen')->move($ruta,$imagenNombre);
-            $evento->imagen = $imagenNombre;
+            $destination_path = 'public/images/eventos';
+            $image = $request->imagen;
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('imagen')->storeAs($destination_path,$image_name);
+
+            $evento->imagen = $image_name;
         };
         if($request->departamento_id != "")
         {
