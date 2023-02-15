@@ -22,7 +22,7 @@
             
             <div class="row">
                 {{-- imagen --}}
-                <div class="col-lg-6"> <img class="img-fluid text-center d-block mx-auto rounded-3" src="{{ asset('img/lugares/'.$lugar->imagen) }}" alt="" srcset=""></div>
+                <div class="col-lg-6"> <img class="img-fluid text-center d-block mx-auto rounded-3" src="{{ asset('storage/images/lugares/'.$lugar->imagen) }}" alt="" srcset=""></div>
                  {{-- ubicación --}}
                 <div class="col-lg-6">  <iframe  class="d-block mx-auto rounded-3 border " height="100%" width="100%" src="{{ $lugar->ubicacion }}" frameborder="0"></iframe></div>
             </div>

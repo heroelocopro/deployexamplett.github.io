@@ -38,7 +38,7 @@
             <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
                 @if (auth()->check())
-                <img alt="Image placeholder" src="{{ auth()->user()->perfil }}">
+                <img alt="Image placeholder" src="/storage/images/users/{{ auth()->user()->perfil }}">
                 @else
                 <img alt="Image placeholder" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png">
                 @endif
@@ -131,7 +131,7 @@
               <div class="media align-items-center">
                 <span  class="avatar avatar-sm rounded-circle">
                   @if (auth()->check())
-                  <img class="rounded-circle" style="height: 100%;width:100%;" alt="Image placeholder" src="{{ asset('img/perfil/'.auth()->user()->perfil) }}">
+                  <img class="rounded-circle" style="height: 100%;width:100%;" alt="Image placeholder" src="{{ asset('storage/images/users/'.auth()->user()->perfil) }}">
                   @else
                   <img alt="Image placeholder" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png">
                   @endif

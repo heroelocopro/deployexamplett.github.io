@@ -86,7 +86,7 @@
             @endif
           @endforeach
 {{-- imagen --}}
- <img class="img-fluid text-center d-block mx-auto rounded-3 my-3" src="{{ asset('img/eventos/'.$evento->imagen) }}" alt="" srcset="">
+ <img class="img-fluid text-center d-block mx-auto rounded-3 my-3" src="{{ asset('storage/images/eventos/'.$evento->imagen) }}" alt="" srcset="">
 
           {{-- descripcion --}}
           <p class="text-center text-dark font-weight-700 my-5"> {{ $evento->descripcion }} </p>
@@ -145,7 +145,7 @@
 @foreach ($usuarios as $usuario )
 @if ($usuario->id == $comentario->usuario_id)
         <div style="width: 100%;max-width: 100px; height: 100px"  class="col-lg-2  p-0 "> 
-          <img style="height: 100%"  class="img-fluid  d-flex justify-content-center align-items-center " src="{{ asset('img/perfil/'.$usuario->perfil) }}" alt="" srcset="">
+          <img style="height: 100%"  class="img-fluid  d-flex justify-content-center align-items-center " src="{{ asset('storage/images/users/'.$usuario->perfil) }}" alt="" srcset="">
         </div>  
        
         <div  class="col-lg-10 ">
